@@ -58,7 +58,7 @@ const SearchForm = () => {
               FRUITS DATABASE
             </div>
             <input
-              className=" block w-[245px] mt-[53px] p-2 h-[44px] text-base font-normal text-white bg-cus-black rounded-md"
+              className={`block w-[245px] mt-[53px] p-2 h-[44px] text-base font-normal text-white bg-cus-black border-2 rounded-md ${isError ? "border-red-500 text-red-500" : "focus:outline-none   border-cus-black"}`}
               value={input}
               onChange={(e) => handleChange(e.target.value)}
               type="text"
@@ -73,7 +73,9 @@ const SearchForm = () => {
               <AiOutlineSearch size="24px" />
             </button>
           </div>
-          {isError ? <p className="text-white">Pidar</p> : null}
+          {isError ? (
+            <p className=" flex justify-center text-red-500 mt-2">Not Found</p>
+          ) : null}
           {result && (
             <div className="h-[120px] relative">
               <div className=" pl-2 bg-cus-black mt-4 text-white">
