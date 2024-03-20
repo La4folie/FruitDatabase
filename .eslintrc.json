@@ -1,0 +1,64 @@
+{
+  "extends": ["next/core-web-vitals"],
+  "rules": {
+    "eqeqeq": 1,
+    "prefer-template": 1,
+    "lines-between-class-members": [
+      1,
+      "always",
+      { "exceptAfterSingleLine": true }
+    ],
+    "import/no-unresolved": 0,
+    "react/destructuring-assignment": [
+      1,
+      "always",
+      { "ignoreClassFields": true }
+    ],
+    "react/display-name": 0,
+    "react/prop-types": 0,
+    "react/function-component-definition": [
+      0,
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
+    "react/no-access-state-in-setstate": 1,
+    "react/no-array-index-key": 1,
+    "react/no-children-prop": 1,
+    "react/no-deprecated": 1,
+    "react/no-did-mount-set-state": 1,
+    "react/no-did-update-set-state": 1,
+    "react/no-direct-mutation-state": 2,
+    "react/no-is-mounted": 2,
+    "react/no-multi-comp": [1, { "ignoreStateless": true }],
+    "react/no-redundant-should-component-update": 1,
+    "react/no-string-refs": 2,
+    "react/no-this-in-sfc": 2,
+    "react/no-typos": 1,
+    "react/no-unescaped-entities": 1,
+    "react/no-unsafe": 1,
+    "react/no-will-update-set-state": 1,
+    "react/require-render-return": 1,
+    "react/self-closing-comp": 1,
+    "react/sort-comp": 1,
+    "react/jsx-boolean-value": [1, "always"],
+    "react/jsx-closing-tag-location": 1,
+    "react/jsx-curly-brace-presence": [1, "never"],
+    "react/jsx-fragments": [1, "syntax"],
+    "react/jsx-handler-names": 1,
+    "react/jsx-no-duplicate-props": 2,
+    "react/jsx-no-useless-fragment": 1,
+    "react/jsx-pascal-case": 1,
+    "react/jsx-filename-extension": [1, { "extensions": [".tsx", ".jsx"] }],
+    "react/prefer-stateless-function": [
+      "error",
+      { "ignorePureComponents": true }
+    ],
+    "react-hooks/rules-of-hooks": "warn",
+    "@typescript-eslint/explicit-function-return-type": 0,
+    "@typescript-eslint/no-explicit-any": 0,
+    "@typescript-eslint/no-use-before-define": 0,
+    "@typescript-eslint/no-var-requires": 0
+  }
+}
