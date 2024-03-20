@@ -1,18 +1,12 @@
-import axios from "axios";
-import { List } from "components/List";
-import { ISearchRes } from "models/ISearchRes";
+import { LoadingOverlay } from "components/LoadingOverlay";
+import { Suspense } from "react";
+import { ListPage } from "./ListPage";
 
-const ListPage = async () => {
-  const { data: fruitList } = await axios.get<ISearchRes[]>(
-    "https://www.fruityvice.com/api/fruit/all",
-  );
-
+const List = async () => {
   return (
-    <div className="flex justify-center items-center">
-      <div className="w-[800px] text-white">
-        <List fruits={fruitList} title="FRUITS LIST" subtitle="ALL" />
-      </div>
-    </div>
+    <Suspense fallback={<LoadingOverlay />}>
+      <ListPage />
+    </Suspense>
   );
 };
-export default ListPage;
+export default List;

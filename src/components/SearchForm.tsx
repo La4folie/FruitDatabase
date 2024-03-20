@@ -19,9 +19,11 @@ const SearchForm = () => {
   const [input, setInput] = useState("");
   const [result, setResult] = useState<ISearchRes | null>(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [isError, setIsError] = useState(false);
 
   const handleChange = (value: string) => {
     setResult(null);
+    setIsError(false);
     setInput(value);
   };
 
@@ -30,6 +32,7 @@ const SearchForm = () => {
     axios
       .get<ISearchRes>(`https://www.fruityvice.com/api/fruit/${input}`)
       .then((res) => setResult(res.data))
+      .catch(() => setIsError(true))
       .finally(() => setIsLoading(false));
   };
 
@@ -63,12 +66,14 @@ const SearchForm = () => {
               placeholder="Find your favourite"
             />
             <button
-              className="absolute bottom-2 right-2  text-white"
+              className="absolute bottom-2 right-2 text-white"
               onClick={handleSearch}
+              disabled={input === ""}
             >
               <AiOutlineSearch size="24px" />
             </button>
           </div>
+          {isError ? <p className="text-white">Pidar</p> : null}
           {result && (
             <div className="h-[120px] relative">
               <div className=" pl-2 bg-cus-black mt-4 text-white">

@@ -1,10 +1,19 @@
 import loadingGif from "../app/assets/loadingGif.gif";
 import Image from "next/image";
 
-export const Loading = () => {
+interface IProps {
+  size?: number;
+}
+
+export const Loading = ({ size }: IProps) => {
   return (
     <div className="h-full flex justify-center items-center">
-      <Image src={loadingGif} alt="loading..." width={100} height={100} />
+      <Image
+        src={loadingGif}
+        alt="loading..."
+        width={size ?? 100}
+        height={size ?? 100}
+      />
     </div>
   );
 };

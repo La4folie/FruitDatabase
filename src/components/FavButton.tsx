@@ -39,7 +39,7 @@ export const FavButton = ({ product, loadFavorites }: IProps) => {
 
   return isLoading ? (
     <div>
-      <Loading />
+      <Loading size={16} />
     </div>
   ) : (
     <button onClick={toggleFavorite}>

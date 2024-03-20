@@ -16,9 +16,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning={true} className="min-h-full">
-      <body className={`${inter.className} min-h-screen`}>
-        <div className="relative w-full h-full bg-gradient-to-t from-black to-cus-purple">
+    <html lang="en" suppressHydrationWarning={true}>
+      <body className={`${inter.className}`}>
+        <div className="relative w-full min-h-screen bg-gradient-to-t from-black to-cus-purple">
           <Header />
           {children}
         </div>
