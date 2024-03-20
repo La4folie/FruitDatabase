@@ -36,7 +36,7 @@ export default async function Detail({ params }: IProps) {
   return (
     <main className="h-screen text-white">
       <div className="h-full flex flex-col justify-center items-center">
-        <div className="text-base font-bold tracking-custom-wide mt-10">
+        <div className="text-base font-bold tracking-custom-wide mt-32">
           {product.name}
         </div>
         <div className="text-4xl font-bold pl-4 tracking-custom-wide">

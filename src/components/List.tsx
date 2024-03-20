@@ -6,16 +6,18 @@ import Link from "next/link";
 interface IProps {
   fruits: ISearchRes[];
   loadFavorites?: () => void;
+  title: string;
+  subtitle: string;
 }
 
-export const List = ({ fruits, loadFavorites }: IProps) => {
+export const List = ({ fruits, loadFavorites, title, subtitle }: IProps) => {
   return (
     <div className="flex flex-col justify-center items-center">
       <div className="flex justify-center mt-32 text-base font-bold tracking-custom-wide">
-        ALL
+        {subtitle}
       </div>
-      <div className="text-center text-4xl font-bold pl-4 tracking-custom-wide">
-        FRUITS LIST
+      <div className="text-center text-4xl font-bold pl-4 tracking-custom-wide mt-2">
+        {title}
       </div>
       <table className="w-full min-w-max text-center mt-20">
         <thead className="text-xs uppercase">

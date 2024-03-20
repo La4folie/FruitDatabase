@@ -9,8 +9,8 @@ const ListPage = async () => {
 
   return (
     <div className="flex justify-center items-center">
-      <div className="w-[800px] ">
-        <List fruits={fruitList} />
+      <div className="w-[800px] text-white">
+        <List fruits={fruitList} title="FRUITS LIST" subtitle="ALL" />
       </div>
     </div>
   );

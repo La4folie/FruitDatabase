@@ -15,5 +15,12 @@ export const FavoritesList = () => {
     loadFavorites();
   }, []);
 
-  return <List fruits={favorites} loadFavorites={loadFavorites} />;
+  return (
+    <List
+      fruits={favorites}
+      loadFavorites={loadFavorites}
+      title="FAVORITES"
+      subtitle="MY"
+    />
+  );
 };
